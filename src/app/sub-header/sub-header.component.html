@@ -22,6 +22,14 @@
   </div>
 </div>
 <div class="container-fluid bg-light div2">
+  <!-- <button mat-button [matMenuTriggerFor]="menu">Categories</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Auctions</button>
+        <button mat-menu-item>Custome Made</button>
+        <button mat-menu-item>Exclusive Services</button>
+        <button mat-menu-item>Sponsorship</button>
+        <button mat-menu-item>Blog</button>
+      </mat-menu> -->
   <div class="option">
     <div class="spa"><a>Auctions</a></div>
     <div class="spa"><a>Custome Made</a></div>
@@ -42,34 +50,31 @@
         <div class="side"><i class="bi bi-heart"></i>&nbsp;<a>Blog</a></div>
       </div>
     </div>
-    <div class="col-9">
+    <div class="col-9" style="padding-right: 120px;">
       <ngb-carousel>
-        <ng-template ngbSlide *ngFor="let image of imglist" [showNavigationIndicators]="showNavigationIndicators">
-          <div class="carousel-caption">
-            <h3>My slide title</h3>
+        <ng-template ngbSlide *ngFor="let image of images">
+          <div class="wrapper">
+            <img [src]="image.src" style="width:100%; height:400px; padding-top: 20px;" alt="Random first slide">
           </div>
-          <a href="" target="_blank" rel="nofollow noopener noreferrer">
-            <div class="picsum-img-wrapper">
-              <img [src]="image" style="width: 70%; padding-top: 10px;" alt="My image description">
-            </div>
-          </a>
+          
         </ng-template>
-      </ngb-carousel>
-      <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="../assets/images/image.jpg" style="width: auto; height: 400px; padding-top: 50px;">
-          </div>
-          <div class="carousel-item">
-            <img src="../assets/images/logo.png" style="width: auto; height: 400px; padding-top: 50px;">
-          </div>
-          <div class="carousel-item">
-            <img src="../assets/images/image.jpg" style="width: auto; height: 400px; padding-top: 50px;">
-          </div>
-        </div>
-      </div>
+      </ngb-carousel> 
     </div>
-  </div> -->
+  </div>
+</div>
+  <div class="wap">
+    <ngx-slick-carousel class="carousel" 
+  #slickModal="slick-carousel" 
+  [config]="slideConfig" 
+  (init)="slickInit($event)"
+  (breakpoint)="breakpoint($event)"
+  (afterChange)="afterChange($event)"
+  (beforeChange)="beforeChange($event)">
+<div ngxSlickItem *ngFor="let slide of slides" class="slide" style="padding: 25px; background-color:#75a76d ;">
+<img src="{{ slide.img }}" alt="" width="100%" height="200">
+</div>
+</ngx-slick-carousel>
+    
 </div>
 
-  
+  <app-home></app-home>

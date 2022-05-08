@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MatSliderModule } from '@angular/material/slider';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -15,16 +15,22 @@ import en from '@angular/common/locales/en';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatCardModule} from '@angular/material/card';
+import { HomeComponent } from './home/home.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { ModalModule } from 'ngx-bootstrap/modal'
 
 registerLocaleData(en);
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    SubHeaderComponent
-  ],
+    SubHeaderComponent,
+      HomeComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -32,7 +38,12 @@ registerLocaleData(en);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NzCarouselModule
+    NzCarouselModule,
+    MatSliderModule,
+    MatMenuModule,
+    MatCardModule,
+    SlickCarouselModule,
+    ModalModule.forRoot()
   ],
   exports:[
     NzCarouselModule
