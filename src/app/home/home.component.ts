@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import * as AOS from 'aos';
+import 'aos/dist/aos.css';
+import { debounce, throttle } from "lodash"
 
 @Component({
   selector: 'app-home',
@@ -8,7 +11,7 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
   providers: [NgbCarouselConfig]
 })
 export class HomeComponent implements OnInit {
-
+  
   title = 'ng-carousel-demo';
    
   images = [
@@ -24,6 +27,11 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    AOS.init({
+      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+    });
   }
+  
 
 }
