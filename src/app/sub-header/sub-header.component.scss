@@ -65,3 +65,11 @@ body .slick-next {
 #example-search-input2{
     float: right;
 }
+
+.first .carousel-control-prev
+{
+    display:none;
+}
+.last .carousel-control-next {
+    display: none;
+}

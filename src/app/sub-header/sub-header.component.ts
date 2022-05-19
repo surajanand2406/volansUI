@@ -52,7 +52,7 @@ export class SubHeaderComponent implements OnInit {
     { img: '../../assets/images/image1.jpg' },
     { img: '../../assets/images/image.jpg' },
   ];
-  slideConfig = { slidesToShow: 3, slidesToScroll: 4 };
+  slideConfig = { slidesToShow: 3, slidesToScroll: 4, arrows:false, autoplay:true, autoplaySpeed:1000 };
   slickInit(e: any) {
     console.log('slick initialized');
   }
@@ -69,22 +69,28 @@ export class SubHeaderComponent implements OnInit {
   images = [
     {title: 'First Slide', short: 'First Slide Short', src: "../../assets/images/image.jpg"},
     {title: 'Second Slide', short: 'Second Slide Short', src: "../../assets/images/image1.jpg"},
-    {title: 'Third Slide', short: 'Third Slide Short', src: "../../assets/images/Nature.jpeg"}
+    {title: 'Third Slide', short: 'Third Slide Short', src: "../../assets/images/Nature.jpeg"},
+    {title: 'Second Slide', short: 'fourth Slide Short', src: "../../assets/images/image1.jpg"},
+    {title: 'Third Slide', short: 'fifth Slide Short', src: "../../assets/images/Nature.jpeg"}
   ];
 
   imglist:any = [];
   dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
   constructor(private utilService:CommonUtilService, config: NgbCarouselConfig) { 
     config.interval = 2000;
-    config.keyboard = true;
+    config.wrap = false;
+    config.keyboard = false;
     config.pauseOnHover = true;
     config.animation = true;
     this.dataSource.data = TREE_DATA;
   }
 
+
   ngOnInit(): void {
     this.getCarouselImg();
   }
+
+
 
 getCarouselImg(){
   this.utilService.getImg().subscribe(resp => {

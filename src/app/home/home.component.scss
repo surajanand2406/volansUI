@@ -1,3 +1,27 @@
+
+*{
+    box-sizing:border-box;  
+  }
+  
+  body{
+    font-family: 'Libre Baskerville', serif;
+  }
+  
+  .container{
+    margin:0 auto;
+    white-space: nowrap;
+  }
+  
+  .card{
+    position:relative;
+    border-radius: 10px;
+    overflow:hidden;
+    margin: 0 auto;
+    box-shadow:0 11px 26px 1px #cefaeb4a, inset 0 -16px 90px #36c4a540;
+    
+  }
+
+
 .div4{
     padding-top: 30px;
     width: 100%;
@@ -34,4 +58,219 @@
     width: 100%;
     height: 300px;
     background-color: #74a73d;
+}
+.checked {
+    color: orange;
+  }
+
+  body .slick-prev, 
+  body .slick-next {
+      height: 45px;
+      width: 40px;
+      background: grey !important;
+      z-index: 100;
+  }
+  .spon{
+    padding-top: 25px;
+    width: 500px;
+    height: 200px;
+    background-image: url("../../assets/images/image.jpg");
+    background-repeat: no-repeat;
+    float: right;
+  }
+  .spon1{
+    padding-top: 25px;
+    width: 500px;
+    height: 200px;
+    background-image: url("../../assets/images/image.jpg");
+    background-repeat: no-repeat;
+
+  }
+  .gap{
+      padding-left: 50px;
+  }
+  .div10{
+      .pad{
+          padding-top: 20px;
+      }
+      background: gray;
+      height: 650px;
+  }
+  .spacing{
+      height: 0px;
+  }
+  .basic{
+      padding-left: 15px;
+      width: 250px;
+      height: 500px;
+      background: #fff;
+      border-radius: 10px;
+  }
+  .hot-badge::after {
+    content: "BASIC";
+    color: #ffff !important;
+    position: absolute;
+    background: linear-gradient(to right, #e0e7e9, #2b48ec);
+    padding: 10px 80px;
+    box-shadow: 0 0 5px 3px #715e006e;
+    top: 19px;
+    right: -28px;
+    color: #5d4d00;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    transform: rotateZ(43deg);
+    border-top-left-radius: 88px;
+    border-bottom-right-radius: 88px;
+    
+}
+.hot-badge1::after {
+    content: "PRO";
+    color: #ffff !important;
+    position: absolute;
+    background: linear-gradient(to right, #85eb9b, #11eb90);
+    padding: 10px 80px;
+    box-shadow: 0 0 5px 3px #715e006e;
+    top: 19px;
+    right: -28px;
+    color: #5d4d00;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    transform: rotateZ(43deg);
+    border-top-left-radius: 88px;
+    border-bottom-right-radius: 88px;
+    
+}
+.hot-badge2::after {
+    content: "GOLD";
+    color: #ffff !important;
+    position: absolute;
+    background: linear-gradient(to right, #cae688, #a9e409);
+    padding: 10px 80px;
+    box-shadow: 0 0 5px 3px #715e006e;
+    top: 19px;
+    right: -28px;
+    color: #5d4d00;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    transform: rotateZ(43deg);
+    border-top-left-radius: 88px;
+    border-bottom-right-radius: 88px;
+    
+}
+.hot-badge3::after {
+    content: "PLATINUM";
+    color: #ffff !important;
+    position: absolute;
+    background: linear-gradient(to right, #e0e7e9, #ec2b2b);
+    padding: 10px 80px;
+    box-shadow: 0 0 5px 3px #715e006e;
+    top: 19px;
+    right: -28px;
+    color: #5d4d00;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    transform: rotateZ(43deg);
+    border-top-left-radius: 88px;
+    border-bottom-right-radius: 88px;
+    
+}
+.button{
+    background: linear-gradient(to right, #68c2db, #2b48ec);
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    height: 35px;
+
+}
+.button1{
+    background: linear-gradient(to right, #85eb9b, #11eb90);
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    height: 35px;
+
+}
+.button2{
+    background: linear-gradient(to right, #cae688, #a9e409);
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    height: 35px;
+
+}
+.button3{
+    background: linear-gradient(to right, #e0e7e9, #ec2b2b);
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    height: 35px;
+
+}
+
+.icon-basic{
+    color: blue;
+    font-size: 25px;
+}
+.icon-pro{
+    color: #00ff9d;
+    font-size: 25px;
+}
+.icon-gold{
+    color: #d5e409;
+    font-size: 25px;
+}
+.icon-plat{
+    color: #ec2b2b;
+    font-size: 25px;
+}
+
+.butn1{
+    padding-top: 20px;
+}
+.butn2{
+    padding-top: 90px;
+}
+.butn3{
+    padding-top: 160px;
+}
+.aff{
+    padding-top: 10px;
+    text-align: center;
+    p{
+        color: white;
+    }
+}
+.div11{
+    height: 350px;
+    background: #36ae7c;
+}
+.div12{
+    height: 500px;
+    background: #5f8347;
+}
+.play-store{
+    padding-top: 170px;
+    padding-left: 50px;
+    h1{
+        padding-left: 100px;
+    }
+}
+.div13{
+    height: 250px;
+    background: gray;
+    text-align: center;
+    h1{
+        padding-top: 60px;
+        font-size: 35px;
+        font-weight: 700px;
+    }
+    input{
+        width: 600px;
+    }
+}
+
+ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
 }

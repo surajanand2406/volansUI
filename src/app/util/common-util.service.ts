@@ -16,5 +16,7 @@ httpOptions = {
 getImg(){
   return this.http.get('assets/images');
 }
-
+getFeatureListing(){
+  return this.http.get('assets/mockdata/featureListing.json');
+}
 }
