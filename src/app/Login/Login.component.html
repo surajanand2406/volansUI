@@ -1,0 +1,52 @@
+<div class="login">
+  <div class="container">
+    <div class="row">
+      <div class="col-6" style="padding-top: 150px;">
+        <h1 style="color: rgb(4, 131, 53); font-size: 30px;">Welcome to,</h1>
+        <h1 style="color: #fff; font-size: 50px; padding-top: 40px;">MyConsignment</h1>
+        <p style="color: #fff; font-size: 20px; padding-top: 30px;">
+          some Welcoming quote here incididunt<br>
+          consectetur adipiscing elit
+        </p>
+      </div>
+      <div class="col-6">
+        <div class="login-page">
+          <h1 style="font-family:cursive; color: red;font-weight: 700px; font-size: 30px; text-align: center;">My Consignment</h1>
+          <h5 style="text-align: center;">Welcome.Please login to your account</h5>
+          <form [formGroup]="userLoginForm">
+            <div class="form-group">
+              <label><span style="color: red;">* </span>Username or Email</label><br>
+              <input class="border-secondary rounded-pill" style="width: 300px ;" formControlName="username">
+            </div>
+            <div class="form-group">
+              <label><span style="color: red;">* </span>Password</label><br>
+              <input class="border-secondary rounded-pill" style="width: 300px ;" formControlName="password">
+            </div>
+            <div class="form-group" style="padding-left: 50px;">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+              <label class="form-check-label" for="flexCheckChecked">
+                Are you agree with term and condition
+              </label>
+            </div>
+            <div class="form-group"><h4 style="color:blue;"><a>Forget password?</a></h4></div>
+            <div class="button">
+              <div class="form-group">
+                <button type="button" class="btn-sm btn-success rounded-pill">login   <i class="bi-3x bi-arrow-right"></i></button>
+                <h5 style="text-align: center; color:green">OR SIGN UP</h5>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn-sm btn-success rounded-pill">register  <i class="bi bi-arrow-right"></i></button>
+                <h5 style="text-align: center; color:green">OR CONTINUE WITH</h5>
+              </div>
+          </div>
+          <div class="b form-group">
+            <button type="button" class="btn btn-link fb">Facebook</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <h2 style="text-align: center;">OR</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn btn-link fb">Google</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
