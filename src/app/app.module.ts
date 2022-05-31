@@ -21,6 +21,9 @@ import { HomeComponent } from './home/home.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ModalModule } from 'ngx-bootstrap/modal'
 import { LoginComponent } from './Login/Login.component';
+import { ListingComponent } from './components/Listing/Listing.component';
+import { BsDatepickerModule, BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
+
 
 registerLocaleData(en);
 
@@ -31,7 +34,8 @@ registerLocaleData(en);
     FooterComponent,
     SubHeaderComponent,
       HomeComponent,
-      LoginComponent
+      LoginComponent,
+      ListingComponent
    ],
   imports: [
     BrowserModule,
@@ -46,7 +50,8 @@ registerLocaleData(en);
     MatMenuModule,
     MatCardModule,
     SlickCarouselModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    BsDatepickerModule.forRoot()
   ],
   exports:[
     NzCarouselModule

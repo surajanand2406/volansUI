@@ -14,7 +14,26 @@
           <h1 style="font-family:cursive; color: red;font-weight: 700px; font-size: 30px; text-align: center;">My Consignment</h1>
           <h5 style="text-align: center;">Welcome.Please login to your account</h5>
           <form [formGroup]="userLoginForm">
-            <div class="form-group">
+            <div class="form-group" *ngIf="!loginData">
+              <label><span style="color: red;">* </span>Full Name</label><br>
+              <input class="border-secondary rounded-pill" style="width: 300px ;" formControlName="username">
+            </div>
+            <div class="form-group" *ngIf="!loginData">
+              <label><span style="color: red;">* </span>Username</label><br>
+              <input class="border-secondary rounded-pill" style="width: 300px ;" formControlName="username">
+            </div>
+            <div class="form-group"  *ngIf="!loginData">
+              <label><span style="color: red;">* </span>Email</label><br>
+              <input class="border-secondary rounded-pill" style="width: 300px ;" formControlName="username">
+            </div>
+            <div class="col-xs-12 col-9 form-group dateType" *ngIf="!loginData">
+              <input type="text"
+                 placeholder="Date of Birth(YYYY-MM-DD)"
+                 class="form-control dob"
+                 bsDatepicker
+                 [bsConfig]="{ isAnimated: true, dateInputFormat: 'YYYY-MM-DD' }">
+           </div>           
+            <div class="form-group" *ngIf="loginData">
               <label><span style="color: red;">* </span>Username or Email</label><br>
               <input class="border-secondary rounded-pill" style="width: 300px ;" formControlName="username">
             </div>
@@ -22,24 +41,29 @@
               <label><span style="color: red;">* </span>Password</label><br>
               <input class="border-secondary rounded-pill" style="width: 300px ;" formControlName="password">
             </div>
+            <div class="form-group" *ngIf="!loginData">
+              <label><span style="color: red;">* </span>Confirm Password</label><br>
+              <input class="border-secondary rounded-pill" style="width: 300px ;" formControlName="password">
+            </div>
             <div class="form-group" style="padding-left: 50px;">
               <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
               <label class="form-check-label" for="flexCheckChecked">
-                Are you agree with term and condition
+                Agree with term and condition
               </label>
             </div>
-            <div class="form-group"><h4 style="color:blue;"><a>Forget password?</a></h4></div>
+            <div class="form-group" *ngIf="loginData"><h4 style="color:blue;"><a>Forget password?</a></h4></div>
             <div class="button">
               <div class="form-group">
-                <button type="button" class="btn-sm btn-success rounded-pill">login   <i class="bi-3x bi-arrow-right"></i></button>
-                <h5 style="text-align: center; color:green">OR SIGN UP</h5>
+                <button type="button" class="btn-sm btn-success rounded-pill" *ngIf="loginData">login   <i class="bi-3x bi-arrow-right"></i></button>
+                <h5 style="text-align: center; color:green" *ngIf="loginData">OR SIGN UP</h5>
               </div>
               <div class="form-group">
-                <button type="button" class="btn-sm btn-success rounded-pill">register  <i class="bi bi-arrow-right"></i></button>
-                <h5 style="text-align: center; color:green">OR CONTINUE WITH</h5>
+                <button type="button" class="btn-sm btn-success rounded-pill">Register  <i class="bi bi-arrow-right"></i></button>
+                <h5 style="text-align: center; color:green"  *ngIf="!loginData">OR Login</h5>
               </div>
+              <h5 style="text-align: center; color:green" *ngIf="loginData">OR CONTINUE WITH</h5>
           </div>
-          <div class="b form-group">
+          <div class="b form-group" *ngIf="loginData">
             <button type="button" class="btn btn-link fb">Facebook</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <h2 style="text-align: center;">OR</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button type="button" class="btn btn-link fb">Google</button>
